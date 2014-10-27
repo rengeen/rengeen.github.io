@@ -62,7 +62,7 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 
-  activate :asset_host, :host => "/rengeen"
+  activate :asset_host, :host => "/rengeen_web"
 end
 
 activate :deploy do |deploy|
