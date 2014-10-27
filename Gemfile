@@ -9,3 +9,4 @@ gem 'middleman-gh-pages', '~> 0.0.2'
 gem 'middleman-neat', '~> 0.0.4'
 
 gem 'slim', '~> 2.0.1'
+gem "middleman-deploy"
