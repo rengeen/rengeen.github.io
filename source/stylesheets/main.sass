@@ -3,5 +3,28 @@
 @import modules
 @import partials
 
-.test
-  +linear-gradient(to top, red, orange)
+.wrapper
+    width: 850px
+    background: #fff
+    margin: 0 auto
+
+.header
+    margin-bottom: 10px
+
+.keyvisual
+    background: #333
+    margin-bottom: 10px
+
+.body
+    +box-sizing(border-box)
+    background: #666
+    margin-bottom: 10px
+
+.sideBar
+    margin-bottom: 10px
+    &_content
+        +box-sizing(border-box)
+        width: 90%
+        margin-left: 10%
+        background: #999
+        padding: 10px
