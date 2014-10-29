@@ -3,10 +3,38 @@
 @import modules
 @import partials
 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, input[type=submit], input[type=button]
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+
+$clMain: #b1003a
+
+html
+    font-size: 62.5%
+body
+    // background: #000
+    line-height: 160%
+    font-family: ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", sans-serif
+    font-size: 1.4rem
+    -webkit-text-size-adjust: none
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    -webkit-touch-callout: none
+    -webkit-user-select:none
+
 .wrapper
     width: 850px
     background: #fff
     margin: 0 auto
+    // border-radius: 10px
+    // padding: 10px
+    margin-top: 10px
+    margin-bottom: 10px
+    padding: 10px
+
 
 .header
     margin-bottom: 10px
@@ -14,10 +42,11 @@
 .keyvisual
     background: #333
     margin-bottom: 10px
+    border-radius: 10px
+
 
 .body
     +box-sizing(border-box)
-    background: #666
     margin-bottom: 10px
 
 .sideBar
@@ -26,14 +55,46 @@
         +box-sizing(border-box)
         width: 90%
         margin-left: 10%
-        background: #999
+        background: #fcd5e2
         padding: 10px
+        border-radius: 10px
+.footer
+    text-align: right
+
+
+.container
+    margin-bottom: 20px
+    &_ttl
+        background: $clMain
+        font-size: 1.6rem
+        padding: 5px
+        border-radius: 5px
+        color: #fff
+        margin-bottom: 10px
+
+.business
+    margin-bottom: 20px
+    &_ttl
+        color: $clMain
+        font-size: 1.6rem
+        border-bottom: 1px #666 solid
+        margin-bottom: 10px
+    &_right
+        padding-left: 10px
+
+.info
+    margin-bottom: 10px
+    &_ttl
+        color: $clMain
+        font-size: 1.6rem
+        border-bottom: 1px #666 solid
+        margin-bottom: 10px
 
 
 // スマホ用処理
 @media screen and (max-width:620px)
-    body
-        background: #f00
+    .wrapper
+        width: auto
     .body
         width: 100%
     .sideBar
