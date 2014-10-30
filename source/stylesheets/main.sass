@@ -65,12 +65,50 @@ body
 .container
     margin-bottom: 20px
     &_ttl
-        background: $clMain
-        font-size: 1.6rem
-        padding: 5px
-        border-radius: 5px
-        color: #fff
+        border-top: 1px solid #CCC
+        border-right: 10px solid #CCC
+        border-bottom: 1px solid #CCC
+        border-left: 30px double #CCC
+        padding:  5px 5px 5px 15px
+        background:  #666
+        background:  -moz-linear-gradient(top,  #F00,  #C00) /* FireFox */
+        background:  -webkit-gradient(linear, left top, left bottom, from(#F00), to(#C00))/* Chrome & Safari */
+        border-radius:  7px
+        -moz-border-radius:  7px /* FireFox */
+        -webkit-border-radius:  7px/* Chrome & Safari */
+        font-size: 140%
+        color: #DDD
         margin-bottom: 10px
+    // &_ttl
+    //     +box-sizing(border-box)
+    //     position: relative
+    //     background: $clMain
+    //     font-size: 1.6rem
+    //     padding: 5px 10px
+    //     border-radius: 5px
+    //     color: #fff
+    //     margin-bottom: 10px
+
+    //     &:before
+    //         content: "<"
+    //         position: absolute
+    //         top: 2px
+    //         left: -10px
+    //         width: 0
+    //         height: 0
+    //         font-size: 25px
+    //         line-height: 1.0
+    //         color: #c96
+    //     &:after
+    //         content: " "
+    //         position: absolute
+    //         top: -2px
+    //         left: -10px
+    //         width: 0
+    //         height: 100%
+    //         border: #600 solid 2px
+    //         border-radius: 2px
+    //         transform: rotate(-2deg)
 
 .business
     margin-bottom: 20px
