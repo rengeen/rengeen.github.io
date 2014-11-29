@@ -11,59 +11,73 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
     font: inherit
     vertical-align: baseline
 
-$clMain: #b1003a
+$clMain: #e80325
 
 html
     font-size: 62.5%
 body
-    // background: #000
+    background: #4f000c
     line-height: 160%
     font-family: ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", sans-serif
-    font-size: 1.4rem
+    font-size: 1.6rem
     -webkit-text-size-adjust: none
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
     -webkit-touch-callout: none
     -webkit-user-select:none
 
+ul
+    list-style: none
+
 .wrapper
     width: 850px
     background: #fff
     margin: 0 auto
-    // border-radius: 10px
-    // padding: 10px
+    border-radius: 10px
     margin-top: 10px
     margin-bottom: 10px
-    padding: 10px
+    // padding: 0 10px 10px
 
 
 .header
-    margin-bottom: 10px
+    margin-bottom: 0px
+    .logo
+        margin-left: 10px
 
 .keyvisual
     background: #333
-    margin-bottom: 10px
+    margin: 10px 0 20px
     border-radius: 10px
 
 
 .body
     +box-sizing(border-box)
     margin-bottom: 10px
+    padding: 0 10px
 
 .sideBar
+    +box-sizing(border-box)
     margin-bottom: 10px
+    padding-right: 10px
     &_content
         +box-sizing(border-box)
-        width: 90%
-        margin-left: 10%
-        background: #fcd5e2
+
+    &_block
+        +box-sizing(border-box)
+        background: #ffe5f9
         padding: 10px
         border-radius: 10px
+        margin-bottom: 10px
 .footer
+    +box-sizing(border-box)
+    border-top: 1px #4f000c solid
     text-align: right
+    padding: 5px 10px
+    a
+        padding-left: 10px
 
 
 .container
-    margin-bottom: 20px
+    margin-bottom: 35px
     &_ttl
         border-top: 1px solid #CCC
         border-right: 10px solid #CCC
@@ -71,14 +85,14 @@ body
         border-left: 30px double #CCC
         padding:  5px 5px 5px 15px
         background:  #666
-        background:  -moz-linear-gradient(top,  #F00,  #C00) /* FireFox */
-        background:  -webkit-gradient(linear, left top, left bottom, from(#F00), to(#C00))/* Chrome & Safari */
+        background:  -moz-linear-gradient(top,  #f4447f,  #e80325) /* FireFox */
+        background:  -webkit-gradient(linear, left top, left bottom, from(#f4447f), to(#e80325))/* Chrome & Safari */
         border-radius:  7px
         -moz-border-radius:  7px /* FireFox */
         -webkit-border-radius:  7px/* Chrome & Safari */
         font-size: 140%
-        color: #DDD
-        margin-bottom: 10px
+        color: #fff
+        margin-bottom: 20px
     // &_ttl
     //     +box-sizing(border-box)
     //     position: relative
@@ -111,32 +125,58 @@ body
     //         transform: rotate(-2deg)
 
 .business
+    margin-bottom: 40px
+    &_ttl
+        color: $clMain
+        font-size: 2.8rem
+        // border-bottom: 1px #666 solid
+        margin-bottom: 20px
+    &_subttl
+        font-weight: bold
+        font-size: 1.8rem
+        background: #eee
+        border-left: 5px #e80325 solid
+        padding: 5px 15px
+        margin-bottom: 10px
+    &_catttl
+        font-weight: bold
+        margin-bottom: 5px
+        span
+            font-size: 1.4rem
+            font-weight: normal
+            padding-left: 5px
+    &_right
+        padding-left: 10px
+    &_content
+        margin-bottom: 10px
+    dt
+        font-weight: bold
+        font-size: 1.8rem
+        margin: 20px 0 10px
+.info
     margin-bottom: 20px
     &_ttl
         color: $clMain
-        font-size: 1.6rem
-        border-bottom: 1px #666 solid
-        margin-bottom: 10px
-    &_right
-        padding-left: 10px
-
-.info
-    margin-bottom: 10px
-    &_ttl
-        color: $clMain
-        font-size: 1.6rem
-        border-bottom: 1px #666 solid
-        margin-bottom: 10px
-
+        font-size: 2rem
+        border-bottom: 1px $clMain solid
+    dt
+        margin-top: 15px
+    dd
+        padding-left: 20px
 
 // スマホ用処理
 @media screen and (max-width:620px)
     .wrapper
         width: auto
+        margin: 0
+        border-radius: 0
     .body
         width: 100%
     .sideBar
         width: 100%
+        margin-left: 10px
         &_content
             width: 100%
             margin-left: 0%
+    .footer
+        padding-right: 20px
