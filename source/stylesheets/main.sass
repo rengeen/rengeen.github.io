@@ -27,6 +27,10 @@ body
     -webkit-touch-callout: none
     -webkit-user-select:none
 
+a
+    &:before
+        content: "» "
+
 ul
     list-style: none
 
@@ -154,7 +158,8 @@ ul
     dt
         font-weight: bold
         font-size: 1.8rem
-        margin: 20px 0 10px
+        margin: 10px 0 5px
+        border-bottom: 1px dotted #ccc
 .info
     margin-bottom: 20px
     &_ttl
